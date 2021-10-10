@@ -1,4 +1,4 @@
-package com.company;
+package PizzaPlus;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -9,10 +9,6 @@ public class Order {
     ArrayList<Pizza> itemsOrdered = new ArrayList<Pizza>();
     private boolean orderVerified;
     private double total;
-
-
-
-
 
     public Order(Customer customer) {
         this.customer = customer;
@@ -109,5 +105,9 @@ public class Order {
 
     public void setOrderVerified(boolean orderVerified) {
         this.orderVerified = orderVerified;
+    }
+
+    public void toppingsScroll(){
+
     }
 }

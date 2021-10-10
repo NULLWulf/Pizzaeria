@@ -1,6 +1,4 @@
-package com.company;
-import java.sql.SQLOutput;
-import java.util.Objects;
+package PizzaPlus;
 import java.util.Scanner;
 public class Main {
 
