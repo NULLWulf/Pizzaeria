@@ -46,7 +46,6 @@ public class Main {
                             }
                         }
                         else{
-
                                 System.out.println("Exiting Customer Profile Menu");
                             }
                         }
@@ -67,7 +66,6 @@ public class Main {
                     System.out.println("Exiting Program, goodbye!");
                     runCondition = false;
             }
-
 
         }while(runCondition);
 

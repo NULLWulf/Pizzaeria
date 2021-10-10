@@ -14,27 +14,21 @@ public class Toppings {
     public double getToppingPrice(){
         return price * quantityOunces;
     }
-
     public String getToppings() {
         return toppings;
     }
-
     public double getPrice() {
         return price;
     }
-
     public int getQuantityOunces() {
         return quantityOunces;
     }
-
     public void setToppings(String toppings) {
         this.toppings = toppings;
     }
-
     public void setPrice(double price) {
         this.price = price;
     }
-
     public void setQuantityOunces(int quantityOunces) {
         this.quantityOunces = quantityOunces;
     }

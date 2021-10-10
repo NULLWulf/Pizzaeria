@@ -2,7 +2,6 @@ package com.company;
 
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.io.*;
 import java.util.Scanner;
 
 public class Customer implements Serializable {
@@ -15,8 +14,7 @@ public class Customer implements Serializable {
 
     // Order and Calculated Related Data
     private double totalOrderPrice;
-    final private ArrayList pizzasOrdered = new ArrayList();
-
+    ArrayList<Order> orders = new ArrayList<Order>();
 
     // Technical Files
     String customerFile = "customer.ser";
@@ -47,11 +45,8 @@ public class Customer implements Serializable {
             selection = scanner.nextInt();
             if(selection == 1){
                 profileDone = true;
-            }else{
-                profileDone = false;
             }
         }
-
         scanner.close();
     }
 
@@ -61,38 +56,20 @@ public class Customer implements Serializable {
         System.out.println("State" + this.getState() + " Zip: " + this.getZipCode());
     }
 
-    public void add(Pizza pizza){
-        pizzasOrdered.add(pizza);
-        this.totalOrderPrice = pizza.getPizzaTotal() + totalOrderPrice;
-    }
-
-    public ArrayList getPizzasOrdered() {
-        return pizzasOrdered;
+    public void add(Order order){
+        orders.add(order);
+        this.totalOrderPrice = order.getTotal();  // function may not be necessary
     }
 
     // Getters and Setters
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
-    public double getTotalOrderPrice() {
-        return totalOrderPrice;
-    }
-    public void setTotalOrderPrice(double totalOrderPrice) {
-        this.totalOrderPrice = totalOrderPrice;
-    }
-    public String getFirstName() {
-        return firstName;
-    }
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
+    public String getPhoneNumber() {return phoneNumber;}
+    public void setPhoneNumber(String phoneNumber) {this.phoneNumber = phoneNumber;
+    }public double getTotalOrderPrice() {return totalOrderPrice;}
+    public void setTotalOrderPrice(double totalOrderPrice) {this.totalOrderPrice = totalOrderPrice;}
+    public String getFirstName() {return firstName;}
+    public void setFirstName(String firstName) {this.firstName = firstName;}
     public String getLastName() {return lastName;}
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
+    public void setLastName(String lastName) {this.lastName = lastName;}
     public String getStreetAddress() {return streetAddress;}
     public void setStreetAddress(String streetAddress) {this.streetAddress = streetAddress;}
     public String getCity() {return city;}
