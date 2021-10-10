@@ -26,20 +26,20 @@ public class Customer implements Serializable {
         boolean profileDone = false;
         int selection = 0;
 
-        while(profileDone){
-            System.out.print("Enter First Name");
+        while(!profileDone){
+            System.out.print("Enter First Name: ");
             this.firstName = scanner.nextLine();
-            System.out.print("Enter Last Name");
+            System.out.print("Enter Last Name: ");
             this.lastName = scanner.nextLine();
-            System.out.print("Enter Street Adress");
+            System.out.print("Enter Street Adress: ");
             this.streetAddress = scanner.nextLine();
-            System.out.print("Enter City");
+            System.out.print("Enter City: ");
             this.city = scanner.nextLine();
-            System.out.print("Enter State");
+            System.out.print("Enter State: ");
             this.state = scanner.nextLine();
-            System.out.print("Enter City");
+            System.out.print("Enter City: ");
             this.zipCode = scanner.nextLine();
-            System.out.print("Enter City");
+            System.out.print("Enter City: ");
 
             System.out.println("Is this information correct?");
             displayCustomerInfo();

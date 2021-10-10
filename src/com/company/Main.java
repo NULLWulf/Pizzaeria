@@ -31,7 +31,7 @@ public class Main {
                         System.out.println("Displaying Customer Information");  // will seek out clenaer solution for this,
                         // probably built in class to display in customer menu
                         customer.displayCustomerInfo();
-                        System.out.println("Enter 1 to return to main, 2 to over current customer data");
+                        System.out.println("Enter 2 to return to main, 1 to over current customer data");
                         selection = scanner.nextInt();
                         if (selection == 1) {
                             System.out.println("Warning, customer profile already made, overwrite? 1 for Y or 2 for N?");
@@ -46,6 +46,7 @@ public class Main {
                             }
                         }
                         else{
+
                                 System.out.println("Exiting Customer Profile Menu");
                             }
                         }
