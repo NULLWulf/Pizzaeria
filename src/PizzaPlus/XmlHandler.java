@@ -11,10 +11,20 @@ public class XmlHandler extends DefaultHandler {
 
     @Override
     public void startElement(String uri, String localName, String qName,
-                             Attributes attributes) throws SAXException {}
+                             Attributes attributes) throws SAXException {
+        if (qName.equals("topping")){
+            topping = new Toppings(attributes.getValue("name"), attributes.getValue("type"),
+                    Double.parseDouble(attributes.getValue("priceForSmall")),Double.parseDouble(attributes.getValue("priceForMedium")),
+                    Double.parseDouble(attributes.getValue("priceFOrLarge")));
+        }
+    }
 
     @Override
-    public void endElement(String uri, String localName, String qName) throws SAXException {}
+    public void endElement(String uri, String localName, String qName) throws SAXException {
+        if (qName.equals("topping")){
+            toppings.add((topping));
+        }
+    }
 
     public ArrayList<Toppings> getToppings() {
         return toppings;

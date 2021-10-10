@@ -10,6 +10,10 @@ public class Pizza {
     Toppings[] currToppings;
     XmlReader toppingsXml = new XmlReader("toppings.xml");
 
+    public Pizza(double pizza){
+        this.pizzaTotal = pizza;
+    }
+
     static double pie12 = 12.00, pie14 = 14.00, pie16 = 16.00;
 
     public double getPizzaTotal() {return pizzaTotal;}
