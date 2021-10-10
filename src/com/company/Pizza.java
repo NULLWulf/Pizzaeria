@@ -7,8 +7,7 @@ public class Pizza {
     ArrayList<Toppings> toppings = new ArrayList<Toppings>();
     private double pizzaTotal;
     Customer customer;
-
-    public Pizza(Customer customer){this.customer = customer;}
+    static double pie12 = 12.00, pie14 = 14.00, pie16 = 16.00;
 
     public double getPizzaTotal() {return pizzaTotal;}
     public Customer getCustomer() {

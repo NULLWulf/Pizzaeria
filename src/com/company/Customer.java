@@ -16,9 +16,6 @@ public class Customer implements Serializable {
     private double totalOrderPrice;
     ArrayList<Order> orders = new ArrayList<Order>();
 
-    // Technical Files
-    String customerFile = "customer.ser";
-
     public void newCustomerMenu(){  // Customer creation menu
         Scanner scanner = new Scanner(System.in);
         boolean profileDone = false;
@@ -29,7 +26,7 @@ public class Customer implements Serializable {
             this.firstName = scanner.nextLine();
             System.out.print("Enter Last Name: ");
             this.lastName = scanner.nextLine();
-            System.out.print("Enter Street Adress: ");
+            System.out.print("Enter Street Address: ");
             this.streetAddress = scanner.nextLine();
             System.out.print("Enter City: ");
             this.city = scanner.nextLine();
