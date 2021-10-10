@@ -32,12 +32,11 @@ public class Serializer implements Serializable {
             ObjectInputStream in = new ObjectInputStream(new FileInputStream(customerFile));
             Customer customer = (Customer) in.readObject();
             in.close();
-            out.println("Found" + customer.getName() + "'s customer data and imported successfully");
+            out.println("Found" + customer.getFirstName() + " " + customer.getLastName() + "'s customer data and imported successfully");
             return customer;
         } catch (FileNotFoundException e){
             out.println("No Customer File Found, please create new customer file");
             out.println("See stack track trace for details");
-            e.printStackTrace();
             return null;
         }
         catch (IOException e) {
@@ -49,7 +48,7 @@ public class Serializer implements Serializable {
         } catch (ClassNotFoundException e) {
             out.println("File found but does not match imported class, no customer data has been imported");
             out.println("See stack trace for details");
-            e.printStackTrace();
+            //e.printStackTrace();
             return null;
         }
     }
