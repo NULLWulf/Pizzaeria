@@ -1,10 +1,6 @@
 package PizzaPlus
 
-import PizzaPlus.Customer.newCustomerMenu
-import PizzaPlus.Customer.displayCustomerInfo
-import PizzaPlus.Customer.add
-import PizzaPlus.Customer.firstName
-import PizzaPlus.Customer.lastName
+import PizzaPlus.Customer.*
 import kotlin.jvm.JvmStatic
 import PizzaPlus.Customer
 import PizzaPlus.Order
@@ -50,5 +46,10 @@ class XmlHandler : DefaultHandler() {
         if (qName == "topping") {
             toppings.add(topping)
         }
+    }
+
+    fun getToppings(): Any {  // need this function to return array list of toppings
+
+        return 0;
     }
 }

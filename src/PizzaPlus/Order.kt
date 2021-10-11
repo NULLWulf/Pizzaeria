@@ -1,10 +1,6 @@
 package PizzaPlus
 
-import PizzaPlus.Customer.newCustomerMenu
-import PizzaPlus.Customer.displayCustomerInfo
-import PizzaPlus.Customer.add
-import PizzaPlus.Customer.firstName
-import PizzaPlus.Customer.lastName
+import PizzaPlus.Customer.*
 import kotlin.jvm.JvmStatic
 import PizzaPlus.Customer
 import PizzaPlus.Order
@@ -53,9 +49,9 @@ class Order(var customer: Customer) : Serializable {
                 selection = scanner.nextInt() // grabs pizza size selection
                 var currentPizza: Pizza?
                 currentPizza = when (selection) {
-                    1 -> Pizza(12)
-                    2 -> Pizza(14)
-                    3 -> Pizza(16)
+                    1 -> Pizza(12.00)
+                    2 -> Pizza(14.00)
+                    3 -> Pizza(16.00)
                     else -> null // needed to rid of erors, may swithc if to if else statement
                 }
                 println("Does this pizza look correct?")
