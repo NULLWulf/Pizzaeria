@@ -60,7 +60,7 @@ public class Main {
                         currentOrder.orderingSystem();  // opens internal ordering system for order class
                         if (currentOrder.isOrderVerified()) {  // if order is completed verified
                             customer.add(currentOrder);  // order will be added to customers order lists
-                            serializer.objectWriter(customer);  // and also be written to file
+                            // serializer.objectWriter(customer);  // and also be written to file
                         } else {  // total failure in ordering system, nothing is store, wrote to file etc.
                             System.out.println("Order not verified, please restart ordering system to order");
                         }
@@ -69,7 +69,7 @@ public class Main {
                         currentOrder.orderingSystem();  // opens internal ordering system
                         if (currentOrder.isOrderVerified()) {
                             customer.add(currentOrder);
-                            serializer.objectWriter(customer);  // same as above if verified will add and write to file
+                            // serializer.objectWriter(customer);  // same as above if verified will add and write to file
                         } else {  // otherwise will fail and nothing will be written
                             System.out.println("Order not verified, please restart ordering system to order");
                         }
