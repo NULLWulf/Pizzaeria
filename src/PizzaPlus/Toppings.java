@@ -8,15 +8,6 @@ public class Toppings {
     private double priceforMedium;
     private double priceforLarge;
     private int quantityOunces;
-
-    public double getToppingPrice() {
-        return toppingPrice;
-    }
-
-    public void setToppingPrice(double toppingPrice) {
-        this.toppingPrice = toppingPrice;
-    }
-
     private double toppingPrice;
 
     public Toppings(String toppings, String type, double priceforSmall, double priceforMedium, double priceforLarge){
@@ -59,11 +50,12 @@ public class Toppings {
         this.priceforLarge = priceforLarge;
     }
 
+    public double getToppingPrice() {
+        return toppingPrice;
+    }
 
-
-    public Toppings(String toppings, int quantityOunces){
-        this.toppings = toppings;
-        this.quantityOunces = quantityOunces;
+    public void setToppingPrice(double toppingPrice) {
+        this.toppingPrice = toppingPrice;
     }
 
     public String getToppings() {

@@ -13,9 +13,8 @@ public class XmlHandler extends DefaultHandler {
     public void startElement(String uri, String localName, String qName,
                              Attributes attributes) throws SAXException {
         if (qName.equals("topping")){
-            topping = new Toppings(attributes.getValue("name"), attributes.getValue("type"),
-                    Double.parseDouble(attributes.getValue("priceForSmall")),Double.parseDouble(attributes.getValue("priceForMedium")),
-                    Double.parseDouble(attributes.getValue("priceFOrLarge")));
+            topping = new Toppings(attributes.getValue("name"), attributes.getValue("type"), Double.parseDouble(attributes.getValue("priceForSmall")),Double.parseDouble(attributes.getValue("PriceForMedium")),
+                    Double.parseDouble(attributes.getValue("priceForLarge")));
         }
     }
 
