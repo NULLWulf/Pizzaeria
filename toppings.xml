@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!---     <topping name="" type="" priceForLarge="" PriceForMedium="" priceForSmall=""/>
+ -->
+<toppings>
+    <topping name="Pepperoni" type="Meat" priceForLarge="3.00" PriceForMedium="1.50" priceForSmall="1.00"/>
+    <topping name="Sausage" type="Meat" priceForLarge="3.00" PriceForMedium="1.50" priceForSmall="1.00"/>
+    <topping name="Ground Turkey" type="Meat" priceForLarge="2.50" PriceForMedium="1.25" priceForSmall=".80"/>
+    <topping name="Ham" type="Meat" priceForLarge="2.50" PriceForMedium="1.50" priceForSmall=".75"/>
+    <topping name="Onion" type="Vegetable" priceForLarge="1.50" PriceForMedium="0.75" priceForSmall=".50"/>
+    <topping name="Jalapeno" type="Vegetable" priceForLarge="1.75" PriceForMedium="1.20" priceForSmall="1.00"/>
+    <topping name="Sun Dried Tomato" type="Vegetable" priceForLarge="2.25" PriceForMedium="1.50" priceForSmall="1.00"/>
+    <topping name="Fire Roasted Bacon" type="Premium Meat" priceForLarge="4.00" PriceForMedium="3.00" priceForSmall="2.00"/>
+    <topping name="Olive" type="Vegetable" priceForLarge="1.25" PriceForMedium="1.00" priceForSmall=".75"/>
+    <topping name="Anchioves" type="Meat" priceForLarge="2.00" PriceForMedium="1.50" priceForSmall="1.00"/>
+    <topping name="Salmon" type="Premium Meat" priceForLarge="4.00" PriceForMedium="3.50" priceForSmall="3.00"/>
+</toppings>
