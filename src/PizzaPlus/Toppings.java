@@ -1,6 +1,8 @@
 package PizzaPlus;
 
-public class Toppings {
+import java.io.Serializable;
+
+public class Toppings implements Serializable {
 
     private String toppings;
     private String type;

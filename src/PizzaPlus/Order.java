@@ -1,9 +1,10 @@
 package PizzaPlus;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Order {
+public class Order implements Serializable {
 
     Customer customer;
     ArrayList<Pizza> itemsOrdered = new ArrayList<Pizza>();

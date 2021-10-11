@@ -13,7 +13,7 @@ public class Serializer implements Serializable {
         out.println("Saving customer data, please do not close application");
         try {
             ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(customerFile));
-            out.writeObject(customer);
+            out.writeObject(customer);  // causing problem, cant write items in aray directly it seems
             out.close();
             System.out.println("Customer data save successful, save to close application");
         } catch (FileNotFoundException e){
@@ -34,7 +34,7 @@ public class Serializer implements Serializable {
             return customer;
         } catch (FileNotFoundException e){
             out.println("No Customer File Found, please create new customer file");
-            out.println("See stack track trace for details");
+
             return null;
         }
         catch (IOException e) {

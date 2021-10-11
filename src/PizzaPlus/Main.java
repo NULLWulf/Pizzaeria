@@ -4,13 +4,11 @@ public class Main {
 
     public static void main(String[] args)  {
 
-        Pizza pizza = new Pizza(12);
-        pizza.toppingsScroller();
-
         Scanner scanner = new Scanner(System.in);  // For general inputs
         Serializer serializer = new Serializer();  // initializes serializer
         Customer customer = serializer.objectReader();  // creates customer objects and attempts to import customer data into it, if any errors returns NULL
         Boolean runCondition = true;  // when false program will terminate
+
 
         int selection;  // main input variable to menu navigation, will be expanded upon later
         do{
