@@ -7,16 +7,19 @@ import javax.xml.parsers.SAXParserFactory
 
 class XmlReader(private val inputFileName: String) {
     private var toppingXmlHandler: XmlHandler? = null
-    private var toppings= Array<Toppings>?
+    private var toppings: Array<Toppings>? = null
+
+
+    //var itemsOrdered = ArrayList<Pizza?>()
 
     // Get the ArrayList of Orders built by the handler and return an array
-    val toppingsList: Array<Toppings>
-        get() {
-            // Get the ArrayList of Orders built by the handler and return an array
-            var list = arrayOfNulls<Toppings>(toppingXmlHandler.getToppings().size)
-            list = toppingXmlHandler.getToppings().toArray(list)
-            return list
-        }
+//    val toppingsList: Array<Toppings>
+////        get() {
+////            // Get the ArrayList of Orders built by the handler and return an array
+//////            var list = ArrayList<Toppings>(toppingXmlHandler?.getToppings().size())
+//////            list = toppingXmlHandler?.getToppings().toArray(list)
+//////            return list
+////        }
 
     init {
         try {
