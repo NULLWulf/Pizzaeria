@@ -1,34 +1,16 @@
 package PizzaPlus
 
-import PizzaPlus.Customer.newCustomerMenu
-import PizzaPlus.Customer.displayCustomerInfo
-import PizzaPlus.Customer.add
-import PizzaPlus.Customer.firstName
-import PizzaPlus.Customer.lastName
-import kotlin.jvm.JvmStatic
-import PizzaPlus.Customer
-import PizzaPlus.Order
-import PizzaPlus.Pizza
-import PizzaPlus.Toppings
-import java.io.ObjectOutputStream
-import java.io.FileOutputStream
-import java.io.FileNotFoundException
-import java.io.IOException
-import java.io.ObjectInputStream
-import java.io.FileInputStream
-import java.lang.ClassNotFoundException
-import kotlin.Throws
-import PizzaPlus.XmlHandler
+import PizzaPlus.Customer.*
 import java.io.File
 import java.lang.Exception
 import javax.xml.parsers.SAXParserFactory
 
 class XmlReader(private val inputFileName: String) {
     private var toppingXmlHandler: XmlHandler? = null
-    private val toppings: Array<Toppings>
+    private var toppings= Array<Toppings>?
 
     // Get the ArrayList of Orders built by the handler and return an array
-    val toppingsList: Array<Toppings?>
+    val toppingsList: Array<Toppings>
         get() {
             // Get the ArrayList of Orders built by the handler and return an array
             var list = arrayOfNulls<Toppings>(toppingXmlHandler.getToppings().size)
