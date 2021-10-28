@@ -1,8 +1,13 @@
 package PizzaPlus;
+import java.io.FileNotFoundException;
 import java.util.Scanner;
 public class Main {
 
-    public static void main(String[] args)  {
+    public static void main(String[] args) throws FileNotFoundException {
+
+//        GSON_ToppingHandler testHandler = new GSON_ToppingHandler();
+        Pizza pizza = new Pizza(15);
+        pizza.toppingsScroller();
 
         Scanner scanner = new Scanner(System.in);  // For general inputs
         Serializer serializer = new Serializer();  // initializes serializer

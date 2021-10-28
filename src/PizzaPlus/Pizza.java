@@ -1,5 +1,9 @@
 package PizzaPlus;
 
+import com.google.gson.Gson;
+
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.Serializable;
 import java.util.ArrayList;
 
@@ -18,8 +22,11 @@ public class Pizza implements Serializable {
     public Pizza(double basePrice){
         this.basePrice = basePrice;
     }
-    public void toppingsScroller(){
-        currToppings = toppingsXml.getToppingsList();
+    public void toppingsScroller() throws FileNotFoundException {
+//        currToppings = toppingsXml.getToppingsList();
+
+        Gson gson = new Gson();
+        currToppings = gson.fromJson(new FileReader("toppings.json"), Toppings[].class);
         for (int i = 0; i < currToppings.length; i++){
             System.out.print("Topping - " + currToppings[i].getToppings() + ". Price per Servings $" + currToppings[i].getPriceforLarge()
             + ".\n");
