@@ -1,11 +1,13 @@
 package PizzaPlus;
 
 import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Pizza implements Serializable {
 
@@ -25,14 +27,12 @@ public class Pizza implements Serializable {
     public void toppingsScroller() throws FileNotFoundException {
 //        currToppings = toppingsXml.getToppingsList();
 
-        Gson gson = new Gson();
-        currToppings = gson.fromJson(new FileReader("toppings.json"), Toppings[].class);
-        for (int i = 0; i < currToppings.length; i++){
-            System.out.print("Topping - " + currToppings[i].getToppings() + ". Price per Servings $" + currToppings[i].getPriceforLarge()
-            + ".\n");
+        List<Toppings> users = new Gson().fromJson(new FileReader("toppings.json"),new TypeToken<List<Toppings>>() {}.getType());
+        users.forEach(System.out::println);
+//        for (int i = 0; i < currToppings.length; i++){
+//            System.out.print("Topping - " + currToppings[i].getToppings() + ". Price per Servings $" + currToppings[i].getPriceforLarge()
+//            + ".\n");
         }
-
-    }
 
     public void add(Toppings topping){
         toppings.add(topping);

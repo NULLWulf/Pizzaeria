@@ -1,18 +1,26 @@
 package PizzaPlus;
-import java.io.FileNotFoundException;
+
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.Writer;
 import java.util.Scanner;
-public class Main {
 
-    public static void main(String[] args) throws FileNotFoundException {
+public class Main<toString> {
 
-//        GSON_ToppingHandler testHandler = new GSON_ToppingHandler();
-        Pizza pizza = new Pizza(15);
-        pizza.toppingsScroller();
-
+    public static void main(String[] args) throws IOException {
         Scanner scanner = new Scanner(System.in);  // For general inputs
         Serializer serializer = new Serializer();  // initializes serializer
         Customer customer = serializer.objectReader();  // creates customer objects and attempts to import customer data into it, if any errors returns NULL
         Boolean runCondition = true;  // when false program will terminate
+
+        Writer writer = new FileWriter("customerData.json");
+        Gson gson = new GsonBuilder().create();
+        gson.toJson(customer, writer);
+        writer.flush(); //flush data to file   <---
+        writer.close(); //close write          <---
 
 
         int selection;  // main input variable to menu navigation, will be expanded upon later
@@ -90,8 +98,10 @@ public class Main {
 //                    runCondition = false;
 //            }
             }
-        }while(runCondition);
+        }while(true);
     }
+
+
 
     public static void mainMenu(){
         System.out.println("1: Customer Profile Data");
