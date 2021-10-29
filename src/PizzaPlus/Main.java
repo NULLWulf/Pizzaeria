@@ -3,9 +3,7 @@ package PizzaPlus;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.Writer;
+import java.io.*;
 import java.util.Scanner;
 
 public class Main<toString> {
@@ -17,10 +15,33 @@ public class Main<toString> {
         Boolean runCondition = true;  // when false program will terminate
 
         Writer writer = new FileWriter("customerData.json");
-        Gson gson = new GsonBuilder().create();
-        gson.toJson(customer, writer);
-        writer.flush(); //flush data to file   <---
-        writer.close(); //close write          <---
+        GsonBuilder builder = new GsonBuilder();
+        builder.setPrettyPrinting();
+        Gson gson = builder.create();
+//        gson.toJson(customer, writer);
+//        writer.flush(); //flush data to file   <---
+//        writer.close(); //close write          <---
+//
+//
+//        Reader reader = new FileReader("customerData.json");
+//        Customer customer2 = gson.fromJson(reader, Customer.class);
+//        reader.close(); //close
+//        System.out.println(customer2.getFirstName());
+//        System.out.println(customer2.getLastName());
+
+
+        Gson gson1 = new Gson();
+        Reader reader1 = new FileReader("toppings.json");
+        ToppingsList toppings = gson1.fromJson(reader1, ToppingsList.class);
+        reader1.close(); //close
+
+        for (Toppings topping: toppings.getToppings()){
+            System.out.println(topping.getToppings());
+            System.out.println(topping.getPriceforLarge());
+            System.out.println(topping.getPriceforLarge());
+            System.out.println(topping.getPriceforMedium());
+            System.out.println(topping.getPriceforSmall());
+        }
 
 
         int selection;  // main input variable to menu navigation, will be expanded upon later
